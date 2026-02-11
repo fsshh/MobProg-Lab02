@@ -13,7 +13,6 @@ void main() {
   // 
   // MyApp() - your application
 }
-  
 class SimplePortfolioApp extends StatelessWidget{
   // class name 
   // doesn't change
@@ -56,7 +55,7 @@ class _HomePageState extends State<HomePage>{
         children: [
           ClipOval(
             child: Image.asset(
-              'lib/assets/images/dexter1x1.jpg',
+              'lib/assets/images/1by1_picture.jpg',
               width: 120,
               height: 120,
               fit: BoxFit.cover,
@@ -64,7 +63,7 @@ class _HomePageState extends State<HomePage>{
           ),
           SizedBox(height: 16),
           Text(
-            'Dexter Logdonio',
+            'Dexters Logdonio',
             style: GoogleFonts.poppins(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -78,6 +77,42 @@ class _HomePageState extends State<HomePage>{
               color: Colors.grey[600],
             ),
           ),
+        ],
+      );
+    }else if (selectedPage == 'About') {
+      return Text('About me: I am a passionate Flutter developer with experience in building cross-platform mobile applications. I enjoy creating beautiful and functional user interfaces using Flutter.'); 
+    }else if (selectedPage == 'Skills') {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Skills',
+            style: GoogleFonts.poppins(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 8),
+          Text('- Dart Programming'),
+          Text('- Flutter Framework'),
+          Text('- UI/UX Design'),
+          Text('- Firebase Integration'),
+        ],
+      );
+    }else if (selectedPage == 'Contact') {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Contact Me',
+            style: GoogleFonts.poppins(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 8),
+          Text('Email: dexterlogdonio24@gmail.com'),
+          Text('Github: github.com/fsshh'),
         ],
       );
     }
@@ -192,10 +227,6 @@ class _HomePageState extends State<HomePage>{
     );
   } 
 
-  @override 
-  void dispose(){
-     _scrollController.dispose();
-    super.dispose();
-  }
+  
 }
 
